@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home.html">
+    <link rel="stylesheet" href="productDetails.html">
+    <title>Denim Hive</title>
+</head>
+<body>
+    
+        <!-- Navigation (Same as Home Page) -->
+    <nav class="navbar">
+        <!-- Same navigation code as index.html -->
+    </nav>
+
+    <!-- Cart Section -->
+    <section class="cart-section">
+        <div class="container">
+            <h1 class="page-title">Your Shopping Cart</h1>
+            
+            <div class="cart-container">
+                <div class="cart-items">
+                    <div class="cart-header">
+                        <div class="header-product">Product</div>
+                        <div class="header-price">Price</div>
+                        <div class="header-quantity">Quantity</div>
+                        <div class="header-total">Total</div>
+                        <div class="header-remove"></div>
+                    </div>
+                    
+                    <div class="cart-item">
+                        <div class="item-product">
+                            <img src="images/hoodie-1-thumb1.jpg" alt="Classic Urban Hoodie">
+                            <div class="product-info">
+                                <h3><a href="product-detail.html">Classic Urban Hoodie</a></h3>
+                                <p class="product-variant">Color: Charcoal | Size: M</p>
+                            </div>
+                        </div>
+                        <div class="item-price">$49.99</div>
+                        <div class="item-quantity">
+                            <div class="quantity-selector">
+                                <button class="qty-btn">-</button>
+                                <input type="number" value="1" min="1">
+                                <button class="qty-btn">+</button>
+                            </div>
+                        </div>
+                        <div class="item-total">$49.99</div>
+                        <div class="item-remove">
+                            <button class="remove-btn"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="cart-item">
+                        <div class="item-product">
+                            <img src="images/tshirt-1-thumb1.jpg" alt="Essential Cotton T-Shirt">
+                            <div class="product-info">
+                                <h3><a href="product-detail.html">Essential Cotton T-Shirt</a></h3>
+                                <p class="product-variant">Color: White | Size: L</p>
+                            </div>
+                        </div>
+                        <div class="item-price">$24.99</div>
+                        <div class="item-quantity">
+                            <div class="quantity-selector">
+                                <button class="qty-btn">-</button>
+                                <input type="number" value="2" min="1">
+                                <button class="qty-btn">+</button>
+                            </div>
+                        </div>
+                        <div class="item-total">$49.98</div>
+                        <div class="item-remove">
+                            <button class="remove-btn"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="cart-actions">
+                        <a href="shop.html" class="btn btn-secondary">
+                            <i class="fas fa-arrow-left"></i> Continue Shopping
+                        </a>
+                        <button class="btn btn-secondary" id="clearCart">
+                            <i class="fas fa-trash"></i> Clear Cart
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="cart-summary">
+                    <h3>Order Summary</h3>
+                    <div class="summary-details">
+                        <div class="summary-row">
+                            <span>Subtotal</span>
+                            <span>$99.97</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Shipping</span>
+                            <span>$5.99</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Tax</span>
+                            <span>$8.00</span>
+                        </div>
+                        <div class="summary-row total">
+                            <span>Total</span>
+                            <span>$113.96</span>
+                        </div>
+                    </div>
+                    <p class="shipping-note">
+                        <i class="fas fa-shipping-fast"></i> Free shipping on orders over $50
+                    </p>
+                    <a href="checkout.html" class="btn btn-primary btn-checkout">
+                        Proceed to Checkout <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <div class="payment-methods">
+                        <p>We accept:</p>
+                        <div class="payment-icons">
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fab fa-cc-amex"></i>
+                            <i class="fab fa-cc-paypal"></i>
+                            <i class="fab fa-apple-pay"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Recently Viewed -->
+            <div class="recently-viewed">
+                <h2 class="section-title">Recently Viewed</h2>
+                <div class="product-grid">
+                    <!-- Recently viewed products will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Same as Home Page) -->
+    <footer class="footer">
+        <!-- Same footer code as index.html -->
+    </footer>
+
+    <script src="js/cart.js"></script>
+    
+</body>
+</html>
