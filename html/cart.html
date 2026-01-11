@@ -3,23 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denim Hive - Shopping Cart</title>
     <link rel="stylesheet" href="../style.css">
-    <title>Denim Hive</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
-    <!-- Navigation (Same as Home Page) -->
-    <nav class="navbar">
-        <!-- Same navigation code as index.html -->
-    </nav>
 
-    <!-- Cart Section -->
+    <!-- HEADER -->
+    <header>
+        <div class="logo">Denim Hive</div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../shop.html">Shop</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CART SECTION -->
     <section class="cart-section">
         <div class="container">
             <h1 class="page-title">Your Shopping Cart</h1>
-            
-            <div class="cart-container">
+
+            <div class="cart-wrapper">
+
+                <!-- CART ITEMS -->
                 <div class="cart-items">
+
+                    <!-- HEADER ROW -->
                     <div class="cart-header">
                         <div class="header-product">Product</div>
                         <div class="header-price">Price</div>
@@ -27,17 +40,17 @@
                         <div class="header-total">Total</div>
                         <div class="header-remove"></div>
                     </div>
-                    
-                    <!-- Jacket Item -->
+
+                    <!-- CART ITEM EXAMPLE -->
                     <div class="cart-item">
                         <div class="item-product">
-                            <img src="images/jackets.jpg" alt="Classic Urban Jacket">
+                            <img src="../images/product1-front.jpg" alt="Utility Denim Jacket">
                             <div class="product-info">
-                                <h3><a href="product-detail.html">Classic Urban Jacket</a></h3>
-                                <p class="product-variant">Color: Charcoal | Size: M</p>
+                                <h3><a href="product-detail.html">Utility Denim Jacket</a></h3>
+                                <p class="product-variant">Color: Green | Size: M</p>
                             </div>
                         </div>
-                        <div class="item-price">₨4,999</div>
+                        <div class="item-price">₨11,499</div>
                         <div class="item-quantity">
                             <div class="quantity-selector">
                                 <button class="qty-btn">-</button>
@@ -45,45 +58,22 @@
                                 <button class="qty-btn">+</button>
                             </div>
                         </div>
-                        <div class="item-total">₨4,999</div>
-                        <div class="item-remove">
-                            <button class="remove-btn"><i class="fas fa-trash"></i></button>
-                        </div>
-                    </div>
-                    
-                    <!-- Shirt Item -->
-                    <div class="cart-item">
-                        <div class="item-product">
-                            <img src="images/shirts-category.jpg" alt="Essential Cotton Shirt">
-                            <div class="product-info">
-                                <h3><a href="product-detail.html">Essential Cotton Shirt</a></h3>
-                                <p class="product-variant">Color: White | Size: L</p>
-                            </div>
-                        </div>
-                        <div class="item-price">₨2,499</div>
-                        <div class="item-quantity">
-                            <div class="quantity-selector">
-                                <button class="qty-btn">-</button>
-                                <input type="number" value="2" min="1">
-                                <button class="qty-btn">+</button>
-                            </div>
-                        </div>
-                        <div class="item-total">₨4,998</div>
+                        <div class="item-total">₨11,499</div>
                         <div class="item-remove">
                             <button class="remove-btn"><i class="fas fa-trash"></i></button>
                         </div>
                     </div>
 
-                    <!-- Jeans Item -->
+                    <!-- Second Item -->
                     <div class="cart-item">
                         <div class="item-product">
-                            <img src="images/jeans-category.jpg" alt="Slim Fit Denim Jeans">
+                            <img src="../images/product2-front.jpg" alt="Slim Fit Denim Jeans">
                             <div class="product-info">
                                 <h3><a href="product-detail.html">Slim Fit Denim Jeans</a></h3>
                                 <p class="product-variant">Color: Blue | Size: 32</p>
                             </div>
                         </div>
-                        <div class="item-price">₨3,499</div>
+                        <div class="item-price">₨5,999</div>
                         <div class="item-quantity">
                             <div class="quantity-selector">
                                 <button class="qty-btn">-</button>
@@ -91,29 +81,26 @@
                                 <button class="qty-btn">+</button>
                             </div>
                         </div>
-                        <div class="item-total">₨3,499</div>
+                        <div class="item-total">₨5,999</div>
                         <div class="item-remove">
                             <button class="remove-btn"><i class="fas fa-trash"></i></button>
                         </div>
                     </div>
-                    
+
                     <div class="cart-actions">
-                        <a href="shop.html" class="btn btn-secondary">
-                            <i class="fas fa-arrow-left"></i> Continue Shopping
-                        </a>
-                        <button class="btn btn-secondary" id="clearCart">
-                            <i class="fas fa-trash"></i> Clear Cart
-                        </button>
+                        <a href="shop.html" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Continue Shopping</a>
+                        <button class="btn btn-secondary" id="clearCart"><i class="fas fa-trash"></i> Clear Cart</button>
                     </div>
+
                 </div>
-                
-                <!-- Order Summary -->
+
+                <!-- ORDER SUMMARY -->
                 <div class="cart-summary">
                     <h3>Order Summary</h3>
                     <div class="summary-details">
                         <div class="summary-row">
                             <span>Subtotal</span>
-                            <span>₨13,496</span>
+                            <span>₨17,498</span>
                         </div>
                         <div class="summary-row">
                             <span>Shipping</span>
@@ -125,15 +112,14 @@
                         </div>
                         <div class="summary-row total">
                             <span>Total</span>
-                            <span>₨14,996</span>
+                            <span>₨18,998</span>
                         </div>
                     </div>
-                    <p class="shipping-note">
-                        <i class="fas fa-shipping-fast"></i> Free shipping on orders over ₨10,000
-                    </p>
+                    <p class="shipping-note"><i class="fas fa-shipping-fast"></i> Free shipping on orders over ₨10,000</p>
                     <a href="checkout.html" class="btn btn-primary btn-checkout">
                         Proceed to Checkout <i class="fas fa-arrow-right"></i>
                     </a>
+
                     <div class="payment-methods">
                         <p>We accept:</p>
                         <div class="payment-icons">
@@ -145,24 +131,46 @@
                         </div>
                     </div>
                 </div>
+
             </div>
-            
-            <!-- Recently Viewed -->
+
+            <!-- RECENTLY VIEWED -->
             <div class="recently-viewed">
                 <h2 class="section-title">Recently Viewed</h2>
                 <div class="product-grid">
-                    <!-- Recently viewed products will be loaded here -->
+                    <!-- Recently viewed product thumbnails here -->
                 </div>
             </div>
+
         </div>
     </section>
 
-    <!-- Footer (Same as Home Page) -->
-    <footer class="footer">
-        <!-- Same footer code as index.html -->
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-section">
+            <h4>Denim Hive</h4>
+            <p>Premium denim for modern lifestyles. Quality and style in every stitch.</p>
+        </div>
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../shop.html">Shop</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Follow Us</h4>
+            <ul class="social-links">
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            </ul>
+        </div>
     </footer>
 
+    <!-- JS -->
     <script src="js/cart.js"></script>
-    
 </body>
 </html>

@@ -3,85 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denim Hive - Product Details</title>
     <link rel="stylesheet" href="../style.css">
-    <title>Denim Hive</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
-    <!-- Navigation (Same as Home Page) -->
-    <nav class="navbar">
-        <!-- Same navigation code as index.html -->
-    </nav>
 
-    <!-- Product Detail -->
+    <!-- HEADER -->
+    <header>
+        <div class="logo">Denim Hive</div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../shop.html">Shop</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- PRODUCT DETAIL SECTION -->
     <section class="product-detail-section">
         <div class="container">
+
+            <!-- Breadcrumb -->
             <div class="breadcrumb">
-                <a href="index.html">Home</a> / 
-                <a href="shop.html">Shop</a> / 
-                <a href="category.html?cat=jackets">Jackets</a> / 
-                <span>Urban Classic Jackets</span>
+                <a href="../index.html">Home</a> / 
+                <a href="../shop.html">Shop</a> / 
+                <span>Utility Denim Jacket</span>
             </div>
-            
+
             <div class="product-detail">
+
+                <!-- IMAGES -->
                 <div class="product-images">
                     <div class="main-image">
-                        <img id="mainProductImage" src="images/jackets.jpg" alt="Urban Classic Jackets - Front View">
+                        <img id="mainProductImage" src="../images/product1-front.jpg" alt="Utility Denim Jacket Front">
                     </div>
                     <div class="thumbnail-images">
-                        <img src="images/jackets.jpg" alt="Urban Classic Jackets - Side View" class="thumbnail active" onclick="changeImage(this)">
-                        <img src="images/jackets.jpg" alt="Urban Classic Jackets - Back View" class="thumbnail" onclick="changeImage(this)">
-                        <img src="images/jackets.jpg" alt="Urban Classic Jackets - Detail View" class="thumbnail" onclick="changeImage(this)">
+                        <img src="../images/product1-front.jpg" alt="Front View" class="thumbnail active" onclick="changeImage(this)">
+                        <img src="../images/product1-back.jpg" alt="Back View" class="thumbnail" onclick="changeImage(this)">
                     </div>
                 </div>
-                
+
+                <!-- PRODUCT INFO -->
                 <div class="product-info">
-                    <h1 class="product-title">Urban Classic Jackets</h1>
+                    <h1 class="product-title">Utility Denim Jacket</h1>
                     <div class="product-price">
-                        <span class="current-price">₨2,999</span>
-                        <span class="original-price">₨6,999</span>
-                        <span class="discount">23% off</span>
-                    </div>
-                    <div class="product-rating">
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </div>
-                        <span class="rating-count">(128 reviews)</span>
+                        <span class="current-price">PKR 11,499</span>
                     </div>
                     <p class="product-description">
-                        Our Classic Urban Jacket combines comfort and style with premium cotton blend fabric. 
-                        Features side pockets, durable stitching, and ribbed cuffs and hem. 
-                        Perfect for casual outings or layering in cooler weather.
+                        Heavyweight green denim jacket with utility pockets and reinforced seams. Perfect for casual outings or layering in cooler weather.
                     </p>
-                    
+
+                    <!-- OPTIONS -->
                     <div class="product-options">
                         <div class="option">
-                            <label for="color">Color:</label>
+                            <label>Color:</label>
                             <div class="color-options">
-                                <div class="color-option active" style="background-color: #2c3e50;" title="Charcoal"></div>
-                                <div class="color-option" style="background-color: #7f8c8d;" title="Stone Grey"></div>
-                                <div class="color-option" style="background-color: #2c2c2c;" title="Black"></div>
-                                <div class="color-option" style="background-color: #34495e;" title="Navy Blue"></div>
+                                <div class="color-option active" style="background-color:#2c3e50" title="Green"></div>
+                                <div class="color-option" style="background-color:#34495e" title="Navy Blue"></div>
+                                <div class="color-option" style="background-color:#7f8c8d" title="Stone Grey"></div>
                             </div>
                         </div>
-                        
+
                         <div class="option">
-                            <label for="size">Size:</label>
+                            <label>Size:</label>
                             <div class="size-options">
                                 <button class="size-option">S</button>
                                 <button class="size-option active">M</button>
                                 <button class="size-option">L</button>
                                 <button class="size-option">XL</button>
-                                <button class="size-option">XXL</button>
                             </div>
                         </div>
-                        
+
                         <div class="option">
-                            <label for="quantity">Quantity:</label>
+                            <label>Quantity:</label>
                             <div class="quantity-selector">
                                 <button class="qty-btn" onclick="decreaseQty()">-</button>
                                 <input type="number" id="quantity" value="1" min="1" max="10">
@@ -89,43 +86,37 @@
                             </div>
                         </div>
                     </div>
-                    
+
+                    <!-- ACTION BUTTONS -->
                     <div class="product-actions">
                         <button class="btn btn-primary btn-add-to-cart">
                             <i class="fas fa-shopping-bag"></i> Add to Cart
                         </button>
                         <button class="btn btn-secondary btn-wishlist">
-                            <i class="far fa-heart"></i> Add to Wishlist
+                            <i class="far fa-heart"></i> Wishlist
                         </button>
                     </div>
 
+                    <!-- PRODUCT META -->
                     <div class="product-meta">
                         <div class="meta-item">
                             <i class="fas fa-shipping-fast"></i>
-                            <div>
-                                <strong>Free Shipping</strong>
-                                <p>On orders over ₨10,000</p>
-                            </div>
+                            <div><strong>Free Shipping</strong><p>On orders over ₨10,000</p></div>
                         </div>
                         <div class="meta-item">
                             <i class="fas fa-undo"></i>
-                            <div>
-                                <strong>30-Day Returns</strong>
-                                <p>Easy return policy</p>
-                            </div>
+                            <div><strong>30-Day Returns</strong><p>Easy return policy</p></div>
                         </div>
                         <div class="meta-item">
                             <i class="fas fa-shield-alt"></i>
-                            <div>
-                                <strong>Quality Guarantee</strong>
-                                <p>Premium materials</p>
-                            </div>
+                            <div><strong>Quality Guarantee</strong><p>Premium materials</p></div>
                         </div>
                     </div>
+
                 </div>
             </div>
-            
-            <!-- Product Tabs -->
+
+            <!-- TABS -->
             <div class="product-tabs">
                 <div class="tab-headers">
                     <button class="tab-header active" onclick="openTab(event, 'description')">Description</button>
@@ -133,68 +124,74 @@
                     <button class="tab-header" onclick="openTab(event, 'reviews')">Reviews</button>
                     <button class="tab-header" onclick="openTab(event, 'shipping')">Shipping</button>
                 </div>
-                
+
                 <div id="description" class="tab-content active">
-                    <h3>Product Description</h3>
-                    <p>Our Classic Urban Jacket is designed for everyday comfort without compromising on style. Made from a premium cotton-polyester blend, this jacket offers the perfect balance of softness and durability.</p>
-                    <p>The fabric is medium-weight, making it suitable for year-round wear. Features include side pockets, durable stitching, and ribbed cuffs and hem to retain shape after multiple washes.</p>
-                    <p>Available in a range of versatile colors that complement any wardrobe. Designed with a regular fit that's comfortable for all-day wear.</p>
+                    <p>Heavyweight denim jacket with utility pockets and reinforced seams. Perfect for casual outings or layering in cooler weather.</p>
                 </div>
-                
+
                 <div id="details" class="tab-content">
-                    <h3>Product Details</h3>
                     <ul>
-                        <li><strong>Material:</strong> 80% Cotton, 20% Polyester</li>
-                        <li><strong>Weight:</strong> Medium (300gsm)</li>
+                        <li><strong>Material:</strong> 100% Cotton Denim</li>
+                        <li><strong>Weight:</strong> Medium-heavy</li>
                         <li><strong>Fit:</strong> Regular</li>
-                        <li><strong>Care Instructions:</strong> Machine wash cold, tumble dry low</li>
-                        <li><strong>Origin:</strong> Ethically made in Vietnam</li>
-                        <li><strong>Features:</strong> Side pockets, durable stitching, ribbed cuffs and hem</li>
+                        <li><strong>Care:</strong> Machine wash cold</li>
+                        <li><strong>Origin:</strong> Pakistan</li>
+                        <li><strong>Features:</strong> Side pockets, reinforced seams, durable stitching</li>
                     </ul>
                 </div>
-                
+
                 <div id="reviews" class="tab-content">
-                    <h3>Customer Reviews</h3>
                     <div class="review">
-                        <div class="review-header">
-                            <div class="reviewer">Alex Johnson</div>
-                            <div class="review-date">April 15, 2024</div>
-                            <div class="review-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
+                        <div class="reviewer">Maria Latif</div>
+                        <div class="review-date">Jan 3, 2026</div>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="far fa-star"></i>
                         </div>
-                        <p class="review-text">Perfect fit and extremely comfortable. The material is soft but durable. Will definitely buy another one!</p>
+                        <p>Comfortable, stylish, and exactly like the photos. Highly recommend!</p>
                     </div>
                 </div>
-                
+
                 <div id="shipping" class="tab-content">
-                    <h3>Shipping Information</h3>
                     <p>Standard shipping: 3-5 business days</p>
-                    <p>Express shipping: 1-2 business days (additional charge)</p>
-                    <p>Free shipping on orders over ₨10,000</p>
-                    <p>International shipping available to select countries</p>
+                    <p>Free shipping for orders over ₨10,000</p>
                 </div>
             </div>
-            
-            <!-- Related Products -->
+
+            <!-- RELATED PRODUCTS -->
             <div class="related-products">
                 <h2 class="section-title">You May Also Like</h2>
                 <div class="product-grid">
-                    <!-- Related products will be loaded here -->
+                    <!-- Related products thumbnails here -->
                 </div>
             </div>
+
         </div>
     </section>
 
-    <!-- Footer (Same as Home Page) -->
-    <footer class="footer">
-        <!-- Same footer code as index.html -->
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-section">
+            <h4>Denim Hive</h4>
+            <p>Premium denim for modern lifestyles. Quality and style in every stitch.</p>
+        </div>
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../shop.html">Shop</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Follow Us</h4>
+            <ul class="social-links">
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            </ul>
+        </div>
     </footer>
-
-    <script src="js/product-detail.js"></script>
-    
-</
+</body>
+</html>
